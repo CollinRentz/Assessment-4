@@ -10,7 +10,7 @@ module.exports = {
         res.status(200).send(randomCompliment);
     },
     getFortune: (req, res) => {
-        const fortunes = ["You will soon contract an unpleasant disease.", "Your fly in down.", "You will find a surprise on your doorstep when you return home.", "Watch a movie with a significant other or loved one, you will be rewarded with a holy kiss.", "Check your back pocket, if there is nothing there then you gave yourself a nice pat on the bum, congrats."];
+        const fortunes = ["You will soon contract an unpleasant disease.", "Your fly is down.", "You will find a surprise on your doorstep when you return home.", "Watch a movie with a significant other or loved one, you will be rewarded with a holy kiss.", "Check your back pocket, if there is nothing there then you gave yourself a nice pat on the bum, congrats."];
       
         let randomIndex = Math.floor(Math.random() * fortunes.length);
         let randomFortune = fortunes[randomIndex];
