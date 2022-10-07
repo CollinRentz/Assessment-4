@@ -2,14 +2,36 @@
 <html>
   <head>
     <title>Back End Assessment</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body class="container">
     <button id="complimentButton">Get a compliment</button>
 
     <button id="fortuneButton">Get a Fortune</button>
-    
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
 
+    <main>
+
+      <form>
+          <input 
+              type='text'
+              id="name"
+              placeholder="What monster?"/>
+          <input 
+              type='text'
+              id="price"
+              placeholder='What is the price?'/>
+          <input 
+              type='text'
+              id="img"
+              placeholder='Paste an image URL'/>
+          <button>add monster</button>
+      </form>
+  
+      <section id="monsters-container"></section>
+  
+      </main>
   </body>
 </html>
