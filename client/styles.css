@@ -13,7 +13,7 @@ header {
   display: flex; 
   justify-content: center; 
   align-items: center;
-  color: darkslategray;
+  color: rgb(37, 111, 190);
 }
 
 main {
@@ -24,7 +24,7 @@ main {
 form {
   width: 350px;
   height: 350px;
-  background-color: darkslategray;
+  background-color: rgb(64, 75, 152);
   position: relative;
   display: flex; 
   flex-direction: column;
@@ -37,7 +37,7 @@ button {
   background-color: #232323;
   width: 75px;
   height: 25px;
-  color: turquoise;
+  color: rgb(255, 255, 255);
   border: none;
   margin: 5px;
 }

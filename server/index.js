@@ -11,7 +11,9 @@ const {
     getMonsters,
     deleteMonster, 
     createMonster, 
-    updateMonster
+    updateMonster,
+    getCompliment,
+    getFortune
 } = require('./controller')
 
 app.get(`/api/monsters`, getMonsters)
@@ -21,11 +23,8 @@ app.put(`/api/monsters/:id`, updateMonster)
 
 app.listen(4000, () => console.log("Server running on 4000"));
 
-const { getCompliment } = require('./controller')
 
 app.get("/api/compliment", getCompliment);
-
-const { getFortune } = require('./controller')
 
 app.get("/api/fortune", getFortune);
 

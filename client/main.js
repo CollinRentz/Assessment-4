@@ -1,19 +1,13 @@
 const monstersContainer = document.querySelector('#monsters-container')
 const form = document.querySelector('form')
 
-const baseURL = () => {
-    axios.get("http://localhost:4000/api/monsters")
-    .then(res => {
-        const data = res.data;
-        alert(data);
-});
-};
+const baseURL = ("http://localhost:4000/api/monsters")
 
-const monsterCallback = ({ data: monsters }) => displayMonsters(monsters)
+const monstersCallback = ({ data: monsters }) => displayMonsters(monsters)
 const errCallback = err => console.log(err)
 
 const getAllMonsters = () => axios.get(baseURL).then(monstersCallback).catch(errCallback)
-const createMonster = body => axios.post(baseURL, body).then(monsterCallback).catch(errCallback)
+const createMonster = body => axios.post(baseURL, body).then(monstersCallback).catch(errCallback)
 const deleteMonster = id => axios.delete(`${baseURL}/${id}`).then(monstersCallback).catch(errCallback)
 const updateMonster = (id, type) => axios.put(`${baseURL}/${id}`, {type}).then(monstersCallback).catch(errCallback)
 
@@ -44,7 +38,7 @@ function createMonsterCard(monster) {
     monsterCard.innerHTML = `<img alt='monster cover image' src=${monster.imageURL} class="monster-cover-image"/>
     <p class="name">${monster.name}</p>
     <div class="btns-container">
-        <button onclick="updateMonster(${house.id}, 'minus')">-</button>
+        <button onclick="updateMonster(${monster.id}, 'minus')">-</button>
         <p class="monster-price">$${monster.price}</p>
         <button onclick="updateMonster(${monster.id}, 'plus')">+</button>
     </div>
