@@ -12,8 +12,8 @@ module.exports = {
     getFortune: (req, res) => {
         const fortunes = ["You will soon contract an unpleasant disease.", "Your fly in down.", "You will find a surprise on your doorstep when you return home.", "Watch a movie with a significant other or loved one, you will be rewarded with a holy kiss.", "Check your back pocket, if there is nothing there then you gave yourself a nice pat on the bum, congrats."];
       
-        let randomIndex = Math.floor(Math.random() * compliments.length);
-        let randomFortune = compliments[randomIndex];
+        let randomIndex = Math.floor(Math.random() * fortunes.length);
+        let randomFortune = fortunes[randomIndex];
       
         res.status(200).send(randomFortune);
     }
